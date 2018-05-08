@@ -1,0 +1,66 @@
+<?php
+
+/*
+ * W3solver.com
+ *
+ * @category    W3solver
+ * @package     W3solver_Qrcode
+ * @Description Qrcode Catalog Product View Page
+ * @author      W3solver
+ */
+
+
+$htmlid = $block->getHtmlId();
+?>
+
+<div id="<?php echo $htmlid; ?>"  class="gallery">
+    <div class="row">
+        <div class="add-video-button-container">
+            <button id="add_qrcode_button" title="<?php echo $block->escapeHtml(__('Generate QR Code')); ?>" type="button" class="action-secondary">
+                <span><?php echo $block->escapeHtml(__('Generate QR Code')) ?></span>
+            </button>
+        </div>
+    </div>
+
+    <?php if (!file_exists($block->getQrcodeImage()) || !is_file($block->getQrcodeImage())) { ?>
+        <div class="qrcode-placeholder image-placeholder image">
+            <div class="product-image-wrapper">
+                <p class="image-placeholder-text">
+                    <?php echo __('QR Code not generated yet.'); ?>
+                </p>
+            </div>
+        </div>
+        <div class="hidden image image-qrcode" data-role="image">
+            <div class="product-image-wrapper">
+                <img class="product-image" src="<?php echo $block->getQrcodeUrl(); ?>"/>
+            </div>
+        </div>
+    <?php } else { ?>
+        <div class="image" data-role="image">
+            <div class="product-image-wrapper">
+                <img class="product-image" src="<?php echo $block->getQrcodeUrl(); ?>"/>
+            </div>
+        </div>
+    <?php } ?>
+</div>
+<script>
+    require(['jquery', 'jquery/ui'], function($) {
+        $("#add_qrcode_button").click(function() {
+            var url = '<?php echo $block->generateQrcodeUrl(); ?>';
+            $.ajax({
+                url: url,
+                data: {'form_key': window.FORM_KEY},
+                type: 'POST',
+                showLoader: true
+            }).done(function(response) {
+
+                if (response) {
+                    $('.product-image').attr('src', response);
+                    $('.qrcode-placeholder').hide();
+                    $('.image-qrcode').removeClass('hidden');
+                }
+
+            });
+        });
+    });
+</script>

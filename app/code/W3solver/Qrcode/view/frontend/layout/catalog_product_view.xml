@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!--
+ * W3solver.com
+ *
+ * @category    W3solver
+ * @package     W3solver_Qrcode
+ * @Description Qrcode Catalog Product View Page xml
+ * @author      W3solver
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="product.info.details">
+            <block class="W3solver\Qrcode\Block\Product\Qrcode" name="qrcode.tab" template="W3solver_Qrcode::product/view/qrcode.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">QR Code</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

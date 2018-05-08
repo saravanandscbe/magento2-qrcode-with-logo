@@ -1,0 +1,29 @@
+{
+    "name": "w3solver/qrcode",
+    "description": "Qrcode generator extension",
+    "type": "magento2-module",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "w3solver",
+            "email": "query@w3solver.com",
+            "homepage": "http://www.w3solver.com"
+        }
+    ],
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "W3solver\\Qrcode\\": ""
+        }
+    },
+    "keywords": [
+        "magento2",
+        "magento 2",
+        "qrcode",
+        "qrcode generator"
+    ]
+}

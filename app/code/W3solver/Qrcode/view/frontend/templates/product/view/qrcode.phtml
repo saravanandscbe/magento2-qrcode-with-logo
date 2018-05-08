@@ -1,0 +1,23 @@
+<?php
+
+/*
+ * W3solver.com
+ *
+ * @category    W3solver
+ * @package     W3solver_Qrcode
+ * @Description Qrcode Catalog Product View Page
+ * @author      W3solver
+*/
+
+
+if ($block->getQrcodeImage()) {
+    ?>
+    <span>
+        <img src=<?php echo $block->getQrcodeImage(); ?> />
+    </span>
+<?php } else { ?>
+
+    <span style="padding: 50px 4px 50px 4px; border: 1px solid #cccccc; color:#ccc; float:left;">
+        NO IMAGE AVAILABLE
+    </span>
+<?php } ?>

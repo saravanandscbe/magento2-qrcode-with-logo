@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<!--
+ * W3solver.com
+ *
+ * @category    W3solver
+ * @package     W3solver_Qrcode
+ * @Description Qrcode Menu xml
+ * @author      W3solver
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="W3solver_Qrcode::Qrcode" title="QR Code" translate="title" module="W3solver_Qrcode" sortOrder="50" parent="Magento_Catalog::catalog" dependsOnModule="W3solver_Qrcode" resource="W3solver_Qrcode::qrcode"/>
+        <add id="W3solver_Qrcode::Qrcode_List" title="List QR Code" translate="title" module="W3solver_Qrcode" sortOrder="60" parent="W3solver_Qrcode::Qrcode" action="qrcode/index/qrcodeList/" resource="W3solver_Qrcode::qrcode"/>
+    </menu>
+</config>

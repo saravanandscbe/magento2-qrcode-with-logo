@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!--
+ * W3solver.com
+ *
+ * @category    W3solver
+ * @package     W3solver_Qrcode
+ * @Description Qrcode List Page xml
+ * @author      W3solver
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+     <css src="W3solver_Qrcode::css/admin.css"/>
+      <script src="W3solver_Qrcode::js/admin.js" src_type="url"/>
+   </head>
+   <body>
+        <referenceContainer name="content">
+            <uiComponent name="w3solver_qrcode_list_grid"/>
+        </referenceContainer>
+    </body>
+</page>

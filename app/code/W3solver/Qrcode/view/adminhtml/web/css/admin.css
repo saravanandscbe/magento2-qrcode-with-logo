@@ -1,0 +1,5 @@
+.qrcode-index-qrcodelist .admin__data-grid-wrap .qr-code-id{  width: 10px !important;}
+.qrcode-index-qrcodelist .admin__data-grid-wrap .qr-code-sku{  width: 20px !important;}
+.qrcode-index-qrcodelist .admin__data-grid-wrap .qr-code-name{  width: 20px !important;}
+.qrcode-index-qrcodelist .admin__data-grid-wrap .qr-code-image{  width: 30px !important;}
+.registerorder-registerorder-index table#entity_id_table tr {cursor: default !important;}
